@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+
+@mixin flex($dir, $jus, $al) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $al;
+}
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #c20a57;
+    padding: 30px;
+    h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 2em;
+    }
+}
+
+section {
+    margin: 30px auto;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        .list {
+            > ul {
+                @include flex(row, space-around, flex-start);
+                flex-wrap: wrap;
+                > li {
+                    flex: 0 0 30%;
+                    @media screen and (max-width: 992px) {
+                        flex: 0 0 40%;
+                    }
+                    @media screen and (max-width: 768px) {
+                        flex: 0 0 60%;
+                    }
+                    @media screen and (max-width: 556px) {
+                        flex: 0 0 90%;
+                    }
+                    margin: 20px auto;
+                    border-radius: 5px;
+                    box-shadow: 2px 2px 9px 0 #00000078;
+                    .head {
+                        background-color: #0a2bc2;
+                        color: #fff;
+                        padding: 10px;
+                        border-radius: 5px 5px 0 0;
+                        line-height: 30px;
+                        .name {
+                            font-size: 1.2em;
+                            font-weight: 500;
+                        }
+                        .role {
+                            font-size: 1em;
+                            font-weight: 500;
+                            svg {
+                                width: 16px;
+                            }
+                        }
+                    }
+                    .body {
+                        background-color: #dddddd5e;
+                        padding: 40px 20px;
+                        ul {
+                            background-color: #fff;
+                            border: 1px solid #ddd;
+                            border-radius: 5px;
+                            li {
+                                border-bottom: 1px solid #ddd;
+                                padding: 10px 15px;
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #c20a57;
+  padding: 30px;
+}
+header h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2em;
+}
+
+section {
+  margin: 30px auto;
+}
+section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section .container .list > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+section .container .list > ul > li {
+  flex: 0 0 30%;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 9px 0 #00000078;
+}
+@media screen and (max-width: 992px) {
+  section .container .list > ul > li {
+    flex: 0 0 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  section .container .list > ul > li {
+    flex: 0 0 60%;
+  }
+}
+@media screen and (max-width: 556px) {
+  section .container .list > ul > li {
+    flex: 0 0 90%;
+  }
+}
+section .container .list > ul > li .head {
+  background-color: #0a2bc2;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  line-height: 30px;
+}
+section .container .list > ul > li .head .name {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+section .container .list > ul > li .head .role {
+  font-size: 1em;
+  font-weight: 500;
+}
+section .container .list > ul > li .head .role svg {
+  width: 16px;
+}
+section .container .list > ul > li .body {
+  background-color: #dddddd5e;
+  padding: 40px 20px;
+}
+section .container .list > ul > li .body ul {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+section .container .list > ul > li .body ul li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 15px;
+}
+section .container .list > ul > li .body ul li:last-child {
+  border-bottom: none;
+}
+
+/*# sourceMappingURL=style.css.map */
