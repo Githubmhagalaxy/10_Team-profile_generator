@@ -1,6 +1,5 @@
 var Employee = require('../lib/Employee');
 
-
 test('Employee with name: A, id: 1, email: a@test.com', () => {
     let obj = new Employee('A', 1, 'a@test.com');
     expect(obj.getName()).toBe('A');

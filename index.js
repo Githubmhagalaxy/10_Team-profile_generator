@@ -42,12 +42,6 @@ var ids = new Set();
                 type: 'input',
                 name: 'officeNumber',
                 message: "Input manager office number",
-                validate: input => {
-                    if(input.length === 10) {
-                        return true;
-                    }
-                    return "office number must have 10 numbers";
-                }
             }
         ]);
         answers.managers.push(new Manager(managerAnswers.name, managerAnswers.id, managerAnswers.email, managerAnswers.officeNumber));
